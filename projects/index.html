@@ -1,0 +1,113 @@
+---
+layout: project
+---
+
+<div class="row">
+  <div class="container">
+    <div class="col-lg-12 ml-auto">
+      <div class="faded-title-box-1">
+	<h1>Project Compendium</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 ml-auto">
+    <div class="faded-box-1" data-toggle="modal" data-target="#exampleModal1">
+      <h1 class="flux">ComfyBot</h1>
+    <hr>
+    <div class="container">
+      <p>A bot designed to optimize comfyness over all else!</p>
+    </div>
+    </div>
+  </div>
+
+    <div class="col-lg-4 ml-auto">
+    <div class="faded-box-1" data-toggle="modal" data-target="#exampleModal2">
+      <h1 class="flux">glak</h1>
+    <hr>
+    <div class="container">
+      <p>General Linux Automation Kit, or glak, is gonna be a cool personal assistant thingy that can automate many linux systems at once. think intelligent grid computing.</p>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 ml-auto">
+    <div class="faded-box-1" data-toggle="modal" data-target="#exampleModal3">
+      <h1 class="flux">Cont.</h1>
+    <hr>
+    <div class="container">
+      <p>Project ideas? I'm clearly out of them!</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal project one. (copy this for each project) -->
+<div class="modal fade modalmod" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ComfyBot</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Ever wanted a personal discord bot? One that, as long as you're careful, has no downtime?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Posts</button>
+        <button type="button" class="btn btn-primary">Github Link</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade modalmod" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Follow me as I attempt to automate everything in my house, and go insane in the process!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modalmod" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/synthage.github.io/2019/10/22/centralize-everything.html</loc>
+<lastmod>2019-10-22T22:57:49-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/synthage.github.io/2019-05-06-First-Post.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/synthage.github.io/about.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/synthage.github.io/contact.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/synthage.github.io/posts/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/synthage.github.io/projects/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/synthage.github.io/</loc>
+</url>
+</urlset>

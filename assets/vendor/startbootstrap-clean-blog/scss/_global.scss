@@ -1,0 +1,433 @@
+// Global styling for this template
+body {
+  font-size: 20px;
+  background: url('../img/background.jpg');
+  @include serif-font;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+/*
+These are the content windows, and the sub classes for the content windows. These are the big rectangular
+blocks on the pages */
+.cw-main {
+    background: rgba(0, 0, 64, 0.9);
+    padding: 10px;
+    color: #bac9d7;
+}
+
+.cw-spacer {
+    padding: 100px;
+}
+
+.subcw-posts {
+    padding: 10px;
+}
+
+.subcw-post {
+    color: #bac9d7;
+}
+
+.subcw-redirects {
+    padding: 10px;
+    background: rgba(50,50,50,.8);
+    margin-left: 300px;
+}
+
+.footer {
+  background-color: #000000;
+}
+
+p {
+  color: #f8f8f8l;
+  line-height: 1.5;
+  margin: 30px 0;
+  a {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  @include sans-serif-font;
+}
+
+a {
+    
+  color: $gray-900;
+  @include transition-all;
+  &:focus,
+  &:hover {
+    color: $primary;
+  }
+}
+a1 {
+  color: #f8f8f8;
+  @include transition-all;
+  &:focus,
+  &:hover {
+    color: $primary;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  color: $gray-600;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.caption {
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $primary;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  color: $white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: $white;
+  background: transparent;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@-webkit-keyframes text-flicker-in-glow
+{
+    0% {
+	opacity:0
+    }
+    10% {
+	opacity:0;
+	text-shadow:none
+    }
+    10.1% {
+	opacity:1;
+	text-shadow:none
+    }
+    10.2% {
+	opacity:0;
+	text-shadow:none
+    }
+    20% {
+	opacity:0;
+	text-shadow:none
+    }
+    20.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.25);
+    }
+    20.6% {
+	opacity:0;
+	text-shadow:none
+    }
+    30% {opacity:0;
+	 text-shadow:none
+	}
+    30.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    30.5% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    30.6% {
+	opacity:0;
+	text-shadow:none
+    }
+    45% {
+	opacity:0;
+	text-shadow:none
+    }
+    45.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    50% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    55% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    55.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    57% {
+	opacity:0;
+	text-shadow:none
+    }
+    57.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)
+    }
+    60% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)
+    }
+    60.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    65% {
+	opacity:0;
+	text-shadow:none
+    }
+    65.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)
+    }
+    75% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)
+    }
+    75.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    77% {
+	opacity:0;
+	text-shadow:none
+    }
+    77.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)
+    }
+    85% {
+	opacity:1
+	;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)
+    }
+    85.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    86% {
+	opacity:0;
+	text-shadow:none
+    }
+    86.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)
+    }
+    100% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)
+    }
+}
+
+@keyframes text-flicker-in-glow {
+    0% {
+	opacity:0
+    }
+    10% {
+	opacity:0;
+	text-shadow:none
+    }
+    10.1% {
+	opacity:1;
+	text-shadow:none
+    }
+    10.2% {
+	opacity:0;
+	text-shadow:none
+    }
+    20% {
+	opacity:0;
+	text-shadow:none
+    }
+    20.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.25)
+    }
+    20.6% {
+	opacity:0;
+	text-shadow:none
+    }
+    30% {
+	opacity:0;text-shadow:none
+    }
+    30.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    30.5% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    30.6% {
+	opacity:0;
+	text-shadow:none
+    }
+    45% {
+	opacity:0;
+	text-shadow:none
+    }
+    45.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    50%{
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    55% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)
+    }
+    55.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    57% {
+	opacity:0;
+	text-shadow:none
+    }
+    57.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)
+    }
+    60% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)
+    }
+    60.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    65% {
+	opacity:0;
+	text-shadow:none
+    }
+    65.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)
+    }
+    75% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)
+    }
+    75.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    77% {
+	opacity:0;
+	text-shadow:none
+    }
+    77.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)
+    }
+    85% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)
+    }
+    85.1% {
+	opacity:0;
+	text-shadow:none
+    }
+    86% {
+	opacity:0;
+	text-shadow:none
+    }
+    86.1% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}
+    100% {
+	opacity:1;
+	text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)
+    }
+}
+
+
+.title-glow {
+    font-weight: 400;
+    font-size: 128px;
+    text-align: center;
+}

@@ -1,0 +1,97 @@
+---
+layout: default1
+---
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background: rgba(0, 0, 0, 0.3);">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Synthage</h1>
+            {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</header>
+
+  <div class="cw-main">
+    <div class="row">
+      <div class="subcw-posts">
+	<div class="col-lg-8 col-md-10 mx-auto">
+          {{ content }}
+          {% for post in site.posts limit : 5 %}
+
+          <article class="post-preview">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+              <h2 class="post-title">{{ post.title }}</h2>
+              {% if post.subtitle %}
+              <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+              {% else %}
+              <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+              {% endif %}
+            </a>
+            <p class="post-meta">Posted by
+              {% if post.author %}
+              {{ post.author }}
+              {% else %}
+              {{ site.author }}
+              {% endif %}
+              on
+              {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+            </p>
+          </article>
+          <hr>
+          {% endfor %}
+          <!-- Pager -->
+          <div class="clearfix"> 
+            <a class="btn btn-primary float-center" href="{{"/posts" | relative_url }}">View All Posts;</a>
+          </div>
+	</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+<div class="cw-spacer">
+  <h1>
+    test</h1>
+  
+</div>
+
+ <script>
+    const target = window.document.getElementsByTagName('h1')[0]
+
+const flickerLetter = letter => `<span style="animation: text-flicker-in-glow ${Math.random()*4}s linear both ">${letter}</span>`
+const colorLetter = letter => `<span style="color: hsla(${Math.random()*360}, 100%, 80%, 1);">${letter}</span>`;
+const flickerAndColorText = text => 
+  text
+    .split('')
+    .map(flickerLetter)
+    .map(colorLetter)
+    .join('');
+const neonGlory = target => target.innerHTML = flickerAndColorText(target.textContent);
+
+
+neonGlory(target);
+    target.onclick = ({ target }) =>  neonGlory(target);
+    </script>
+<footer>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+      </div>
+    </div>
+  </div>
+</footer>
